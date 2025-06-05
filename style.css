@@ -1,0 +1,319 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #F9EBDA;
+    color: #333;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #D0BA95; /* Green */
+    padding: 15px 50px;
+    color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.nav-left a {
+    color: #352812;
+    text-decoration: none;
+    margin-right: 20px;
+    font-size: 1.1em;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.nav-left a.button {
+    padding: 9px 16px;
+    width: 100px;
+    height: 29px;
+    color: white;
+    background: #382F1F;
+    mix-blend-mode: color-burn;
+    box-shadow: 0px 0.379726px 0.759452px rgba(0, 0, 0, 0.05);
+    border-radius: 29px;
+
+}
+
+.nav-left a.button:hover{
+    background-color: white;
+    color: #352812;
+}
+
+.nav-left a:hover {
+    color: #e2e6ea;
+}
+
+.nav-right {
+    font-size: 1em;
+    font-weight: 600;
+    letter-spacing: 2px;
+    color: #352812;
+}
+
+.telescope-o {
+    /* —Pngtree—3d magnifying glass_5507517 1 */
+
+    height: 90;
+    width: 100;
+    display: block;
+    background: url("—Pngtree—3d magnifying glass_5507517.png");
+    transform: rotate(32.17deg);
+
+}
+
+
+
+/* Hero Section */
+.hero-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 100px 50px;
+    background-color: #F9EBDA;
+    text-align: center;
+    min-height: 500px; /* Adjust as needed */
+}
+
+.hero-left {
+    flex: 1;
+    text-align: left;
+    padding-right: 30px;
+}
+
+.hero-left h1 {
+    font-size: 3.5em;
+    color: #352812;
+    margin-bottom: 15px;
+}
+
+.hero-left p {
+    font-size: 1.3em;
+    color: #555;
+    margin-bottom: 30px;
+}
+
+.get-started-button {
+    display: inline-block;
+    background-color: #352812;
+    color: white;
+    padding: 15px 30px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1.1em;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.get-started-button:hover {
+    transform: translateY(-2px);
+}
+
+.hero-right {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-right svg {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Use Model Section */
+.use-model-section {
+    padding: 80px 50px;
+    text-align: center;
+    background-color: #382F1F; /* Slightly darker grey */
+}
+
+.use-model-section h2 {
+    font-size: 2.5em;
+    color: white;
+    margin-bottom: 40px;
+}
+
+.model-buttons button,
+.model-buttons label {
+    background-color: #D0BA95; /* Dark grey */
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    margin: 0 10px;
+    transition: background-color 0.3s ease;
+}
+
+.model-buttons button:hover,
+.model-buttons label:hover {
+    background-color: #352812;
+}
+
+/* Prediction Results (for Streamlit/JS integration) */
+#prediction-results {
+    margin-top: 40px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    display: none; /* Hidden by default, shown by JS when prediction is made */
+}
+
+.loading-bar {
+    width: 0%; /* Will be controlled by JS/Streamlit */
+    height: 10px;
+    background-color: #4CAF50;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    transition: width 0.5s ease-in-out;
+}
+
+.prediction-text {
+    font-size: 1.2em;
+    color: #333;
+    text-align: left;
+}
+
+/* About Section */
+.about-section {
+    padding: 80px 50px;
+    text-align: center;
+    background-color: #F9EBDA; /* Light grey */
+}
+
+.about-section h2 {
+    font-size: 2.5em;
+    color: #352812;
+    margin-bottom: 20px;
+}
+
+.about-section p {
+    font-size: 1.1em;
+    color: #555;
+    line-height: 1.6;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        padding: 15px 20px;
+    }
+
+    .nav-left {
+        margin-bottom: 10px;
+    }
+
+    .hero-section {
+        flex-direction: column;
+        padding: 50px 20px;
+    }
+
+    .hero-left {
+        padding-right: 0;
+        text-align: center;
+        margin-bottom: 40px;
+    }
+
+    .hero-left h1 {
+        font-size: 2.5em;
+    }
+
+    .hero-left p {
+        font-size: 1em;
+    }
+
+    .hero-right {
+        max-width: 250px;
+    }
+
+    .use-model-section, .about-section {
+        padding: 50px 20px;
+    }
+
+    .use-model-section h2, .about-section h2 {
+        font-size: 2em;
+    }
+
+    .model-buttons button {
+        display: block;
+        width: 80%;
+        margin: 15px auto;
+    }
+}
+
+.custom-file-upload {
+    display: inline-block;
+    background-color: #6c757d; /* Dark grey */
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    margin: 0 10px;
+    transition: background-color 0.3s ease;
+}
+
+.custom-file-upload:hover {
+    background-color: #5a6268;
+}
+
+/* Prediction Results (for Streamlit/JS integration) */
+#prediction-results {
+    margin-top: 40px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    display: none; /* Hidden by default, shown by JS when prediction is made */
+    text-align: left; /* Align text within results */
+}
+
+.loading-bar {
+    width: 0%; /* Will be controlled by JS/Streamlit */
+    height: 10px;
+    background-color: #4CAF50;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    transition: width 0.5s ease-in-out;
+}
+
+.prediction-text {
+    font-size: 1.2em;
+    color: #333;
+    text-align: left;
+}
+
+.prediction-text h3 {
+    margin-top: 0;
+    color: #28a745;
+}
+
+.prediction-text ul {
+    list-style: none;
+    padding: 0;
+}
+
+.prediction-text li {
+    margin-bottom: 8px;
+    padding: 5px;
+    background-color: #e6ffe6;
+    border-left: 4px solid #28a745;
+    border-radius: 3px;
+}
